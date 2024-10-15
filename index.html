@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Manutenção Eletrônica</title>
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault(); // Impede o envio tradicional do formulário
+
+            // Captura os valores dos campos de nome e mensagem
+            var nome = document.getElementById('nome').value;
+            var mensagem = document.getElementById('mensagem').value;
+
+            // Formata o texto para o link do WhatsApp
+            var textoFormatado = encodeURIComponent("Meu nome é " + nome + ". " + mensagem);
+
+            // Define o número de WhatsApp e gera o link com a mensagem
+            var numeroWhatsApp = "5531990841852"; // Número com código do país (55) e código de área
+            var linkWhatsApp = "https://wa.me/" + numeroWhatsApp + "?text=" + textoFormatado;
+
+            // Redireciona o usuário para o WhatsApp
+            window.open(linkWhatsApp, '_blank');
+
+            // Limpar os campos após o envio
+            limparCampos();
+        }
+
+        function limparCampos() {
+            document.getElementById("nome").value = "";
+            document.getElementById("mensagem").value = "";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo1.png" alt="Logo da Empresa" class="logo" style="width: 100px; height: 100px; object-fit: cover;">
+            <h1>RGA SERVIÇOS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico">
+                <img src="img01.jpg" alt="Manutenção Elétrica" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Manutenção Elétrica</h3>
+                <p>Realizamos manutenção preventiva e corretiva em instalações elétricas.</p>
+            </div>
+            <div class="servico">
+                <img src="img02.jpg" alt="Segurança Eletrônica" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Segurança Eletrônica</h3>
+                <p>Instalação e manutenção de sistemas de segurança eletrônica.</p>
+            </div>
+            <div class="servico">
+                <img src="img03.jpg" alt="Portão Eletrônico" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Portão Eletrônico</h3>
+                <p>Manutenção e instalação de portões eletrônicos automáticos.</p>
+            </div>
+            <div class="servico">
+                <img src="img04.jpg" alt="Controle de Acesso" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Controle de Acesso</h3>
+                <p>Instalação de sistemas de controle de acesso para segurança adicional.</p>
+            </div>
+            <div class="servico">
+                <img src="img05.jpeg" alt="Energia Solar" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Energia Solar</h3>
+                <p>Instalação de sistemas de energia solar para reduzir custos e preservar o meio ambiente.</p>
+            </div>
+            <div class="servico">
+                <img src="img06.jpg" alt="Câmeras" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Câmeras de Monitoramento</h3>
+                <p>Instalação e manutenção de sistema de câmeras para segurança adicional.</p>
+            </div>
+            <div class="servico">
+                <img src="img07.jpeg" alt="Lavadora" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Lavadoras</h3>
+                <p>Instalação e manutenção em lavadoras.</p>
+            </div>
+
+            <div class="servico">
+                <img src="img08.jpeg" alt="Eletrodomestico" style="width: 350px; height: 250px; object-fit: cover;">
+                <h3>Eletrodomestico</h3>
+                <p>Manutenção em Eletrodomesticos.</p>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <p>Aqui estão alguns de nossos trabalhos realizados.</p>
+        <div class="galeria-imagens">
+            <img src="logo1.png" alt="Projeto 1" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="logo1.png" alt="Projeto 2" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="logo1.png" alt="Projeto 3" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="logo1.png" alt="Projeto 4" style="width: 100px; height: 100px; object-fit: cover;">
+            <img src="logo1.png" alt="Projeto 5" style="width: 100px; height: 100px; object-fit: cover;">
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form onsubmit="enviarMensagem(event);">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+    
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+    
+            <button type="submit" class="whatsapp-button">Enviar Mensagem</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Manutenção Eletrônica em Belo Horizonte.</p>
+        <p>Tel: (31) 99084-1852 / e-mail: gardoniandrade@gmail.com </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão do site */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+
+#contato {
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Margem externa */
+}
+
+
+header {
+    background: #f1efef; /* Cor de fundo do cabeçalho */
+    color: #333; /* Cor do texto no cabeçalho */
+    padding: 10px 0; /* Espaçamento acima e abaixo do cabeçalho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens da lista em linha */
+    margin-right: 10px; /* Espaçamento entre os itens da lista */
+}
+
+nav ul li a {
+    color: #fff; /* Cor dos links de navegação */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+#servicos {
+    padding: 20px; /* Espaçamento dentro da seção de serviços */
+}
+
+.servicos-container {
+    display: flex; /* Ativa o modo flex */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: space-between; /* Espaçamento uniforme entre os itens */
+}
+
+.servico {
+    flex: 0 0 48%; /* Define a largura de cada serviço como 48% */
+    margin-bottom: 20px; /* Espaçamento inferior entre os serviços */
+    text-align: center; /* Centraliza o texto dentro de cada serviço */
+}
+
+.servico img {
+    width: 80%; /* A imagem ocupa 100% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px; /* Adiciona cantos arredondados à imagem */
+}
+
+#galeria {
+    padding: 10px; /* Espaçamento dentro da seção de galeria */
+}
+
+.galeria-imagens img {
+    width: 100%; /* Cada imagem ocupa 30% da largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 10px; /* Espaçamento entre as imagens da galeria */
+}
+
+form {
+    display: flex; /* Usa Flexbox para organizar os elementos do formulário */
+    flex-direction: column; /* Alinha os elementos do formulário em coluna */
+}
+
+form label {
+    margin-bottom: 5px; /* Espaço abaixo de cada rótulo de campo */
+}
+
+form input, form textarea {
+    margin-bottom: 25px; /* Espaço abaixo de cada campo de entrada */
+    padding: 10px; /* Preenchimento interno para melhorar a aparência dos campos */
+    border: 1px solid #333; /* Borda cinza clara em torno dos campos */
+    border-radius: 5px; /* Cantos arredondados para os campos de entrada */
+}
+
+button {
+    padding: 10px; /* Preenchimento interno para os botões */
+    background: #333; /* Cor de fundo escura para os botões */
+    color: #fff; /* Cor do texto branca nos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Cantos arredondados para os botões */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+}
+
+button:hover {
+    background: #555; /* Cor de fundo mais clara quando o botão é passado o mouse */
+}
+
+.whatsapp-button {
+    padding: 10px; /* Preenchimento interno para o botão do WhatsApp */
+    background: #088fdd; /* Cor de fundo do botão do WhatsApp */
+    color: #fff; /* Cor do texto branca */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Cantos arredondados para o botão */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    text-align: center; /* Centraliza o texto no botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Faz o botão se comportar como um botão */
+    margin-top: 10px; /* Espaço acima do botão */
+}
+
+.whatsapp-button:hover {
+    background: #0dc2c2; /* Cor de fundo mais escura quando o botão é passado o mouse */
+}
+
+footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    padding: 20px; /* Preenchimento interno para o rodapé */
+    background: #333; /* Cor de fundo escura para o rodapé */
+    color: #f8f8f8; /* Cor do texto branca */
+    position: relative; /* Define a posição relativa do rodapé */
+    bottom: 0; /* Posiciona o rodapé no fundo do contêiner pai */
+    width: 100%; /* Define a largura do rodapé para 100% do contêiner pai */
+}
+
+/* teste */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos entre logo e menu */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px 20px; /* Adiciona um pouco de espaçamento */
+    background-color: #f8f8f8; /* Cor de fundo da barra superior */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinha o logo e o texto verticalmente */
+}
+
+.logo-container h1 {
+    margin-left: 10px; /* Espaço entre logo e o nome da empresa */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaçamento entre os links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ajuste da tela  */
+
+/* Estilos para telas grandes (largura mínima de 769px) */
+@media (min-width: 769px) {
+    .listagem .listagem-item .imagem-produto:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+/* Estilos para telas médias (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .listagem .listagem-item .imagem-produto:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+/* Estilos para telas pequenas (largura máxima de 600px) */
+@media (max-width: 600px) {
+    .content {
+        padding-bottom: 15vh; /* Ajuste conforme necessário para dispositivos móveis */
+    }
+    .add-to-cart {
+        width: 100%;
+        box-sizing: border-box; /* Garante que o preenchimento não aumente a largura total */
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Altera para uma coluna em telas pequenas */
+    }
+    .product {
+        padding: 20px; /* Ajusta o padding para telas menores */
+    }
+    header nav ul {
+        flex-direction: column; /* Ajusta o menu de navegação para colunas em telas pequenas */
+    }
+    header nav ul li {
+        display: block; /* Faz com que os itens do menu sejam exibidos como blocos */
+        margin-bottom: 10px; /* Adiciona espaço entre os itens do menu */
+    }
+    .footer-bar {
+        font-size: 0.8em; /* Reduz o tamanho da fonte no rodapé para telas pequenas */
+    }
+}
