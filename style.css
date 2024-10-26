@@ -179,7 +179,7 @@ nav ul li a {
 }
 
 /* Estilos para telas pequenas (largura máxima de 600px) */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .content {
         padding-bottom: 15vh; /* Ajuste conforme necessário para dispositivos móveis */
     }
